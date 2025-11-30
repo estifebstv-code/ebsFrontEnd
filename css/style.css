@@ -2676,6 +2676,11 @@ h3.content-img-grid-h3 {
 .header-nav ul li a:hover {
   color: #009ec6;
 }
+.header-nav ul li a:hover {
+  background-color: #cfcccc7e;
+  padding: 1rem;
+  border-radius: 25%;
+}
 .header-nav .lg-col-wrapper {
   padding: 0 2rem;
   display: flex;
@@ -2871,7 +2876,7 @@ ul.nav-small.nav-open,
 .is-sticky .logo-resp {
   display: block;
   float: left;
-  width: 125px;
+  /* width: 125px; */
 }
 @media only screen and (max-width: 900px) {
   .is-sticky .logo-resp {
