@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Banner */
+.schedule-banner {
+  width: 100%;
+  height: 45vh;
+  background: url('https://images.unsplash.com/photo-1581091870622-df7de6daae81?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 20px;
+}
+
+.schedule-banner h1 {
+  font-size: 3rem;
+}
+
+/* Tabs */
+.tabs {
+  max-width: 900px;
+  margin: 30px auto 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1b73e8;
+  color: white;
+  border-color: #1b73e8;
+}
+
+/* Schedule Section */
+.schedule-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 10px 20px;
+  display: none;
+}
+
+.schedule-section.active {
+  display: block;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.show-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Weekly Grid */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.week-day {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .schedule-banner h1 {
+    font-size: 2rem;
+  }
+}

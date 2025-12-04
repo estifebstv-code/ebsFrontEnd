@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Channel | Stories</title>
+    <link rel="stylesheet" href="stories.css">
+</head>
+<body>
+
+<header>
+    <h1>📖 TV Channel Stories</h1>
+</header>
+
+<div class="container">
+
+    <!-- Story List -->
+    <div class="story-list">
+
+        <div class="story-card" onclick="openStory('The Lost Letter', 'A mysterious letter appears that changes the lives of everyone in the village...')">
+            <h2>The Lost Letter</h2>
+            <p>A mysterious letter appears, changing a life forever.</p>
+        </div>
+
+        <div class="story-card" onclick="openStory('A Secret Revealed', 'The truth comes to light as hidden secrets break free...')">
+            <h2>A Secret Revealed</h2>
+            <p>The shocking truth finally comes out.</p>
+        </div>
+
+        <div class="story-card" onclick="openStory('The Final Showdown', 'The hero faces their greatest enemy in an unforgettable confrontation...')">
+            <h2>The Final Showdown</h2>
+            <p>The ultimate confrontation begins.</p>
+        </div>
+
+        <div class="story-card" onclick="openStory('Unexpected Visitor', 'A stranger arrives at night bringing surprising news...')">
+            <h2>Unexpected Visitor</h2>
+            <p>Mystery knocks at the door.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- STORY POPUP DISPLAY -->
+<div id="storyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeStory()">&times;</span>
+        <h2 id="storyTitle"></h2>
+        <p id="storyDescription"></p>
+        <button class="read-btn" onclick="readFullStory()">Read Full Story</button>
+    </div>
+</div>
+
+<!-- FULL STORY PAGE -->
+<div id="fullStoryPage" class="full-story hidden">
+    <button class="back-btn" onclick="closeFullStory()">⬅ Back</button>
+    <h1 id="fullStoryTitle"></h1>
+    <p id="fullStoryText"></p>
+</div>
+
+<script src="stories.js"></script>
+
+</body>
+</html>

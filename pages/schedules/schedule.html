@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Schedule</title>
+  <link rel="stylesheet" href="schedule.css" />
+</head>
+<body>
+
+  <!-- Banner -->
+  <header class="schedule-banner fade-in">
+    <h1>Broadcast Schedule</h1>
+    <p>Stay updated with our daily and weekly programs.</p>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs fade-in">
+    <button class="tab active" data-target="today">Today</button>
+    <button class="tab" data-target="week">This Week</button>
+  </div>
+
+  <!-- Today Schedule -->
+  <section id="today" class="schedule-section fade-in active">
+    <h2>Today's Programs</h2>
+
+    <div class="schedule-grid">
+      <div class="show-card">
+        <h3>Morning News</h3>
+        <p>🕒 6:00 AM - 7:00 AM</p>
+      </div>
+
+      <div class="show-card">
+        <h3>Breakfast Talk</h3>
+        <p>🕒 7:00 AM - 9:00 AM</p>
+      </div>
+
+      <div class="show-card">
+        <h3>Documentary Hour</h3>
+        <p>🕒 9:00 AM - 10:00 AM</p>
+      </div>
+
+      <div class="show-card">
+        <h3>Midday Headlines</h3>
+        <p>🕒 12:00 PM - 12:30 PM</p>
+      </div>
+
+      <div class="show-card">
+        <h3>Afternoon Show</h3>
+        <p>🕒 3:00 PM - 4:00 PM</p>
+      </div>
+
+      <div class="show-card">
+        <h3>Prime Time News</h3>
+        <p>🕒 8:00 PM - 9:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Schedule -->
+  <section id="week" class="schedule-section fade-in">
+    <h2>This Week</h2>
+
+    <div class="week-grid">
+      <div class="week-day">
+        <h3>Monday</h3>
+        <p>• Morning News – 6:00 AM</p>
+        <p>• Sports Highlights – 1:00 PM</p>
+        <p>• Prime Time News – 8:00 PM</p>
+      </div>
+
+      <div class="week-day">
+        <h3>Tuesday</h3>
+        <p>• Breakfast Talk – 7:00 AM</p>
+        <p>• Documentary – 2:00 PM</p>
+        <p>• Entertainment Night – 9:00 PM</p>
+      </div>
+
+      <div class="week-day">
+        <h3>Wednesday</h3>
+        <p>• Culture Show – 10:00 AM</p>
+        <p>• Midday Headlines – 12:00 PM</p>
+        <p>• Evening Special – 7:00 PM</p>
+      </div>
+
+      <div class="week-day">
+        <h3>Thursday</h3>
+        <p>• Morning News – 6:00 AM</p>
+        <p>• Tech Talk – 3:00 PM</p>
+        <p>• Prime Time News – 8:00 PM</p>
+      </div>
+
+      <div class="week-day">
+        <h3>Friday</h3>
+        <p>• Breakfast Talk – 7:00 AM</p>
+        <p>• Weekly Review – 6:00 PM</p>
+        <p>• Movie Night – 9:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="schedule.js"></script>
+</body>
+</html>
