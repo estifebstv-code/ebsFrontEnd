@@ -9,7 +9,7 @@ body {
 .banner {
   width: 100%;
   height: 55vh;
-  background: url('/ebsFrontEnd/images/ebsimages/banner.jpeg') center/cover no-repeat;
+  background: url('/images/ebsimages/banner.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +88,7 @@ body {
   max-width: 1000px;
   margin: auto;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .partners-track {
@@ -132,6 +132,32 @@ body {
 
 .carousel-btn.prev { left: 5px; }
 .carousel-btn.next { right: 5px; }
+
+
+/* SECTIONS */
+.section-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 60px auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ff7000;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 3px;
+}
 
 /* MOBILE */
 @media (max-width: 600px) {

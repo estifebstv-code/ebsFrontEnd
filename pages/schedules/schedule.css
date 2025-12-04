@@ -9,7 +9,7 @@ body {
 .schedule-banner {
   width: 100%;
   height: 45vh;
-  background: url('/ebsFrontEnd/images/ebsimages/banner.jpeg') center/cover no-repeat;
+  background: url('/images/ebsimages/banner.jpeg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,10 +66,17 @@ body {
 }
 
 .show-card {
-  background: white;
+  background: rgb(247, 192, 121);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  
+}
+
+.show-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* Weekly Grid */
@@ -80,10 +87,16 @@ body {
 }
 
 .week-day {
-  background: white;
+  background: rgb(247, 192, 121);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.week-day:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* Fade-in animation */
@@ -96,6 +109,31 @@ body {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* SECTIONS */
+.section-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 60px auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ff7000;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 3px;
 }
 
 /* Mobile */
