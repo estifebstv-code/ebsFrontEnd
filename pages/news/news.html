@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Times Gazette</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+
+    <!-- <header class="header">
+    <h1 class="newspaper-title">THE OLD TIMES GAZETTE</h1>
+    <p class="date-line">Established 1890 • Today’s Edition</p> -->
+    
+    <!-- Hamburger button for small screens -->
+    <!-- <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
+</header> -->
+
+<header class="header">
+    <h1 class="newspaper-title">THE EBS TIMES GAZETTE</h1>
+    <p class="date-line">Established 1890 • Today’s Edition</p>
+
+    <!-- Hamburger button for small screens -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
+</header>
+
+
+
+    <div class="main-content">
+
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search articles..." onkeyup="filterArticles()">
+                
+              </div>
+              <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                  <li class="reading">World</li>
+                  <li class="reading">Politics</li>
+                  <li class="reading">Culture</li>
+                  <li class="reading">Science</li>
+                  <li class="reading">Sports</li>
+                </ul>
+                <button class="read-more-btn"  onclick="toggleBW()">Toggle B&W</button>
+            </div>
+        </aside>
+
+        <main class="container">
+
+            <!-- Example Article -->
+            <article class="article">
+                <h2 class="headline">Bold Headline of the Day</h2>
+                <div class="media-box">
+                    <img src="../../images/ebsimages/seyifu.webp" alt="News Image">
+                    <p class="caption">Short image description goes here.</p>
+                </div>
+
+                <p class="dropcap" class="summary">
+                    This is a short summary of the news article. Click below to read more.
+                </p>
+
+                <button class="read-more-btn" onclick="toggleDescription(this)">
+                    Show More
+                </button>
+
+                <p  class="full-description hidden dropcap">
+                    This is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    This is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    This is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                </p>
+            </article>
+            <article class="article">
+                <h2 class="headline">Bold Headline of the Day</h2>
+                <div class="media-box">
+                    <img src="../../images/ebsimages/besentu.jpeg" alt="News Image">
+                    <p class="caption">Short image description goes here.</p>
+                </div>
+
+                <p class="dropcap" class="summary">
+                    This is a short summary of the news article. Click below to read more.
+                </p>
+
+                <button class="read-more-btn" onclick="toggleDescription(this)">
+                    Show More
+                </button>
+
+                <p  class="full-description hidden dropcap">
+                    This is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                </p>
+            </article>
+            <article class="article">
+                <h2 class="headline"> Headline of the Day</h2>
+                <div class="media-box">
+                    <img src="../../images/ebsimages/helen.jpeg" alt="News Image">
+                    <p class="caption">Short image description goes here.</p>
+                </div>
+
+                <p class="dropcap" class="summary">
+                    what a This is a short summary of the news article. Click below to read more.
+                </p>
+
+                <button class="read-more-btn" onclick="toggleDescription(this)">
+                    Show More
+                </button>
+
+                <p  class="full-description hidden dropcap">
+                    whatThis is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    whatThis is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    whatThis is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    whatThis is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                    whatThis is the full detailed description of the article. You can write long text here about the news content, history, analysis, etc. Everything expands smoothly when the user clicks “Show More.”
+                </p>
+            </article>
+
+            <!-- Duplicate <article> blocks for more news -->
+            
+        </main>
+
+    </div>
+
+    <script src="news.js"></script>
+</body>
+</html>

@@ -1,64 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Channel | Stories</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+       <!-- ********* -->
+
+    <link rel="stylesheet" href="../../css/all.min.css" crossorigin="anonymous" />
+
+    <link href="../../css/style.css" rel="stylesheet" />
+    <script src="../../js/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+    <script>
+      var WEBVIEW = WEBVIEW || {};
+      WEBVIEW.is_webview = false;
+      WEBVIEW.log_stats = function () {};
+      WEBVIEW.full_url = "https://metv.com/";
+      WEBVIEW.only_content = false;
+      WEBVIEW.access_token = "";
+      WEBVIEW.market_id = "1";
+      WEBVIEW.app_location_enabled = false;
+      WEBVIEW.version = 1;
+      var WCS = WCS || {};
+      WCS.isHomepage = true;
+      WCS.is_svengoolie = false;
+      WCS.CAPTCHA_SITE_KEY = "6Lee4v4SAAAAAMqR4dJGfD5PpNut-pwf12qezPdZ";
+      var WVM = WVM || {};
+    </script>
+    <script src="../../js/scripts.js"></script>
+    <!-- ********* -->
+
     <link rel="stylesheet" href="stories.css">
+
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Weather Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 </head>
+
 <body>
+    <!-- header section  -->
+    <header>
+      <div class="header-outer-container lg-col-wrapper-no-space clearfix">
+        <!-- NEW USER WELCOME PACKAGE GOES HERE  -->
 
-<header>
-    <h1>📖 TV Channel Stories</h1>
-</header>
+        <div class="header-row-wrapper">
+          <div class="header-logo-container">
+            <span class="header-nav-menu-tab"><i class="fa fa-bars"></i></span>
+            <a href="/"
+              ><img
+                style="width: 5em"
+                class="logo"
+                src="/images/ebsimages/cropped-EBS-Logo.png"
+            /></a>
+          </div>
+          <div class="header-buttons mobile-only">
+            <a class="btn-primary btn-small purple" href="/"
+              ><img src="images/television_icon.png" />Where To Watch
+            </a>
+            <a class="btn-primary btn-small purple" href="/"> Advertize Now </a>
+            <a
+              class="contact btn-primary btn-small yellow"
+              href="/pages/contact/contact.html"
+              ><i class="fas fa-envelope"></i>Contact
+            </a>
+          </div>
+          <div class="header-buttons desktop-only">
+            <a class="btn-primary btn-small purple" href="/"
+              ><img src="images/television_icon.png" />Where To Watch
+            </a>
+            <a class="btn-primary btn-small blue" href="/" target="_blank"
+              ><i class="fas fa-shopping-cart"></i>Advertize Now
+            </a>
+            <a
+              class="contact btn-primary btn-small yellow"
+              href="/pages/contact/contact.html"
+              ><i class="fas fa-envelope"></i>Contact
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="header-nav sticky">
+        <div class="rainbow-border-container non-sticky">
+          <div class="rainbow-border"></div>
+        </div>
+        <div class="lg-col-wrapper clearfix">
+          <span class="header-nav-menu-tab bottom"
+            ><i class="fa fa-bars"></i
+          ></span>
+          <a href="/" title="ebs HD"
+            ><img
+              class="logo-resp"
+              src="images/ebsimages/cropped-EBS-Logo.png"
+              width="30"
+              height="40"
+          /></a>
+          <ul class="clearfix">
+            <li>
+              <a href="/pages/schedules/schedule.html">News</a>
+            </li>
+            <li>
+              <a href="/pages/schedules/schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="/pages/shows/shows.html">Shows</a>
+            </li>
+            <li>
+              <a href="/pages/stories/stories.html">Stories</a>
+            </li>
+            <li>
+              <a href="/pages/about/index2.html">About</a>
+            </li>
+            <li>
+              <a href="/pages/music/index2.html" target="_blank" rel="noopener">
+                Music</a
+              >
+            </li>
+            <li>
+              <a href="/pages/cinema/index2.html" rel="noopener" target="_blank"
+                >Cinema</a
+              >
+            </li>
+            <li>
+              <a href="/pages/childrens/index2.html">Children's </a>
+            </li>
+            <div class="mobile-only">
+              <li>
+                <a href="/">LIve stream</a>
+              </li>
+            </div>
+            <div class="mobile-only">
+              <li>
+                <a href="/pages/about/index2.html">About</a>
+              </li>
+              <li>
+                <a href="/pages/contact/contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="/advertise/">Advertise</a>
+              </li>
+              <li>
+                <a href="/pages/childrens/index2.html">Children's </a>
+              </li>
+              <li></li>
+            </div>
+            <div class="header-nav-icons">
+              <li class="header-nav-search">
+                <i class="fa fa-search"></i>
+              </li>
+            </div>
+            <div class="header-login-container bottom">
+              <div class="user-notifications"></div>
+            </div>
+          </ul>
+        </div>
+        <!-- .lg-col-wrapper -->
+        <div class="rainbow-border-container sticky">
+          <div class="rainbow-border"></div>
+        </div>
+        <div class="search-bar closed">
+          <div class="lg-col-wrapper-no-space">
+            <form
+              class="search-form clearfix"
+              action="/search/"
+              method="get"
+              enctype="multipart/form-data"
+            >
+              <div class="search-bar-input-wrap">
+                <input
+                  type="text"
+                  name="search_term"
+                  value="Search..."
+                  placeholder="Search..."
+                />
+              </div>
+              <button type="submit" name="submit">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- .header-wrapper -->
+      <div class="alert-container"></div>
+    </header>
+    <!-- header section  -->
+<section class="header2">
+    <h1>Weather Dashboard</h1>
 
-<div class="container">
+    <!-- Top 5 + Search -->
+    <div class="header-controls">
 
-    <!-- Story List -->
-    <div class="story-list">
-
-        <div class="story-card" onclick="openStory('The Lost Letter', 'A mysterious letter appears that changes the lives of everyone in the village...')">
-            <h2>The Lost Letter</h2>
-            <p>A mysterious letter appears, changing a life forever.</p>
+        <div class="top-cities">
+            <button onclick="loadCity('London')">London</button>
+            <button onclick="loadCity('New York')">New York</button>
+            <button onclick="loadCity('Tokyo')">Tokyo</button>
+            <button onclick="loadCity('Paris')">Paris</button>
+            <button onclick="loadCity('Dubai')">Dubai</button>
         </div>
 
-        <div class="story-card" onclick="openStory('A Secret Revealed', 'The truth comes to light as hidden secrets break free...')">
-            <h2>A Secret Revealed</h2>
-            <p>The shocking truth finally comes out.</p>
-        </div>
-
-        <div class="story-card" onclick="openStory('The Final Showdown', 'The hero faces their greatest enemy in an unforgettable confrontation...')">
-            <h2>The Final Showdown</h2>
-            <p>The ultimate confrontation begins.</p>
-        </div>
-
-        <div class="story-card" onclick="openStory('Unexpected Visitor', 'A stranger arrives at night bringing surprising news...')">
-            <h2>Unexpected Visitor</h2>
-            <p>Mystery knocks at the door.</p>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Search city..." />
+            <button onclick="searchWeather()">Search</button>
         </div>
 
     </div>
+</section>
 
-</div>
+<main class="main-layout">
 
-<!-- STORY POPUP DISPLAY -->
-<div id="storyModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeStory()">&times;</span>
-        <h2 id="storyTitle"></h2>
-        <p id="storyDescription"></p>
-        <button class="read-btn" onclick="readFullStory()">Read Full Story</button>
-    </div>
-</div>
+    <!-- LEFT WEATHER CARD -->
+     <div class="left-side">
 
-<!-- FULL STORY PAGE -->
-<div id="fullStoryPage" class="full-story hidden">
-    <button class="back-btn" onclick="closeFullStory()">⬅ Back</button>
-    <h1 id="fullStoryTitle"></h1>
-    <p id="fullStoryText"></p>
-</div>
+       <div id="weatherCard" class="weather-card hidden">
+           <i id="bigIcon" class="wi"></i>
+           <h2 id="cityName"></h2>
+           <h3 id="temperature"></h3>
+           <p id="description"></p>
+           <p id="extra"></p>
+       </div>
+        <!-- 5-Day Forecast -->
+           <div id="forecast" class="forecast hidden"></div>
+   
+           <!-- Temperature Chart -->
+           <canvas id="tempChart" class="chart hidden"></canvas>
+     </div>
+
+    <!-- RIGHT MAP -->
+    <div id="map"></div>
+
+</main>
 
 <script src="stories.js"></script>
-
 </body>
 </html>
