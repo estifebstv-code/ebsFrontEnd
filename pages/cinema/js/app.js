@@ -56,7 +56,7 @@ function openModal(movie) {
 }
 
 
-close.onclick = () => modal.style.display = 'none';
+close.onclick = () => modal.style.display = 'none'; alert('heyy');
 
 
 // CATEGORY FILTER
