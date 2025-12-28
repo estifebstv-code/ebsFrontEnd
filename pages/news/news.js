@@ -47,3 +47,27 @@ function toggleSidebar() {
 //     const sidebar = document.querySelector('.sidebar');
 //     sidebar.classList.toggle('active');
 // }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const newsTicker = document.getElementById('newsTicker');
+
+  // Your list of news items
+  const dummyNews = [
+    "Global markets reach all-time high amid economic recovery.",
+    "New breakthrough in sustainable energy announced by tech giants.",
+    "Local sports team clinches championship in overtime thriller!",
+    "Weather Alert: Storm system expected to move through the region this weekend.",
+    "SpaceX successfully lands another rocket on a drone ship."
+  ];
+
+  // Build the ticker content
+  // We duplicate the items once to ensure a seamless loop
+  function populateTicker() {
+    const content = dummyNews.map(item => `<div class="ticker-item">${item}</div>`).join('');
+    newsTicker.innerHTML = content + content;
+  }
+
+  populateTicker();
+});

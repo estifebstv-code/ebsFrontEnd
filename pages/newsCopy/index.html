@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ticker-wrap">
+        <div class="ticker-label">Breaking News</div>
+        <div class="ticker-content">
+            <div class="ticker-scroll" id="ticker-scroll">
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3>Categories</h3>
+                <ul id="category-list">
+                    <li><a class="cat-link active" data-category="all">All News</a></li>
+                    <li><a class="cat-link" data-category="tech">Technology</a></li>
+                    <li><a class="cat-link" data-category="business">Business</a></li>
+                    <li><a class="cat-link" data-category="sports">Sports</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="news-feed">
+            <div id="hero-area"></div>
+            
+            <div class="news-grid" id="news-grid"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

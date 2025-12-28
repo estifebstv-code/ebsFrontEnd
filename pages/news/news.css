@@ -316,3 +316,65 @@ body {
     }
 }
 
+
+/* *********************** */
+
+
+/* Container styles */
+.custom-ticker-wrap {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+    height: 40px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Red Title Label */
+.ticker-title {
+    background: #ff0000;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* Scrolling area */
+.ticker-content-container {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.ticker-canvas {
+    display: flex;
+    white-space: nowrap;
+    padding-left: 100%; /* Start from the right */
+    animation: marquee 25s linear infinite;
+}
+
+.ticker-canvas:hover {
+    animation-play-state: paused;
+}
+
+/* Individual News Item */
+.ticker-item {
+    padding: 0 40px;
+    font-size: 0.95rem;
+}
+
+.ticker-item a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+/* Animation Logic */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}

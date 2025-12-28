@@ -1,263 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Shows</title>
-  <link rel="stylesheet" href="shows.css" />
-  <link rel="stylesheet" href="../../css/style.css" media="screen" />
-       <!-- ********* -->
-
-    <link rel="stylesheet" href="../../css/all.min.css" crossorigin="anonymous" />
-
-    <link href="../../css/style.css" rel="stylesheet" />
-    <script src="../../js/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
-    <script src="../../js/jquery.sticky.js"></script>
-    <script>
-      var WEBVIEW = WEBVIEW || {};
-      WEBVIEW.is_webview = false;
-      WEBVIEW.log_stats = function () {};
-     // WEBVIEW.full_url = "https://metv.com/";
-      WEBVIEW.only_content = false;
-      WEBVIEW.access_token = "";
-      WEBVIEW.market_id = "1";
-      WEBVIEW.app_location_enabled = false;
-      WEBVIEW.version = 1;
-      var WCS = WCS || {};
-      WCS.isHomepage = true;
-      WCS.is_svengoolie = false;
-      WCS.CAPTCHA_SITE_KEY = "6Lee4v4SAAAAAMqR4dJGfD5PpNut-pwf12qezPdZ";
-      var WVM = WVM || {};
-    </script>
-    <script src="../../js/scripts.js"></script>
-    <!-- ********* -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channel Browser</title>
+    <link rel="stylesheet" href="shows.css">
 </head>
 <body>
-    <!-- header section  -->
-    <header>
-      <div class="header-outer-container lg-col-wrapper-no-space clearfix">
-        <!-- NEW USER WELCOME PACKAGE GOES HERE  -->
 
-        <div class="header-row-wrapper">
-          <div class="header-logo-container">
-            <span class="header-nav-menu-tab"><i class="fa fa-bars"></i></span>
-            <a href="/"
-              ><img
-                style="width: 5em"
-                class="logo"
-                src="/images/ebsimages/cropped-EBS-Logo.png"
-            /></a>
-          </div>
-          <div class="header-buttons mobile-only">
-            <a class="btn-primary btn-small purple" href="/"
-              ><img src="images/television_icon.png" />Where To Watch
-            </a>
-            <a class="btn-primary btn-small purple" href="/"> Advertize Now </a>
-            <a
-              class="contact btn-primary btn-small yellow"
-              href="/pages/contact/contact.html"
-              ><i class="fas fa-envelope"></i>Contact
-            </a>
-          </div>
-          <div class="header-buttons desktop-only">
-            <a class="btn-primary btn-small purple" href="/"
-              ><img src="images/television_icon.png" />Where To Watch
-            </a>
-            <a class="btn-primary btn-small blue" href="/" target="_blank"
-              ><i class="fas fa-shopping-cart"></i>Advertize Now
-            </a>
-            <a
-              class="contact btn-primary btn-small yellow"
-              href="/pages/contact/contact.html"
-              ><i class="fas fa-envelope"></i>Contact
-            </a>
-          </div>
-        </div>
-      </div>
-      <nav class="header-nav sticky">
-        <!-- <div class="rainbow-border-container non-sticky">
-          <div class="rainbow-border"></div>
-        </div> -->
-        <div class="lg-col-wrapper clearfix">
-          <span class="header-nav-menu-tab bottom"
-            ><i class="fa fa-bars"></i
-          ></span>
-          <a href="/" title="ebs HD"
-            ><img
-              class="logo-resp"
-              src="../../images/ebsimages/cropped-EBS-Logo.png"
-              width="30"
-              height="40"
-          /></a>
-          <ul class="clearfix">
-            <li>
-              <a href="/pages/news/news.html">News</a>
-            </li>
-            <li>
-              <a href="/pages/schedules/schedule.html">Schedule</a>
-            </li>
-            <li>
-              <a href="/pages/shows/shows.html">Shows</a>
-            </li>
-            <li>
-              <a href="/pages/weather/weather.html">Weather</a>
-            </li>
-            <li>
-              <a href="/pages/about/index2.html">About</a>
-            </li>
-            <li>
-              <a href="/pages/music/index2.html" target="_blank" rel="noopener">
-                Music</a
-              >
-            </li>
-            <li>
-              <a href="/pages/cinema/index2.html" rel="noopener" target="_blank"
-                >Cinema</a
-              >
-            </li>
-            <li>
-              <a href="/pages/childrens/index2.html">Children's </a>
-            </li>
-            <div class="mobile-only">
-              <li>
-                <a href="/">LIve stream</a>
-              </li>
+    <div class="container">
+        <header>
+            <button id="backBtn" onclick="showPlaylistsView()" style="display:none;">← Back to Playlists</button>
+            <h1 id="mainTitle">Channel Playlists</h1>
+            <div id="sub-header">
+                <div class="g-ytsubscribe" data-channelid="UCVcc_sbg3AcXLV9vVufJrGg" data-layout="default" data-count="default"></div>
             </div>
-            <div class="mobile-only">
-              <li>
-                <a href="/pages/about/index2.html">About</a>
-              </li>
-              <li>
-                <a href="/pages/contact/contact.html">Contact</a>
-              </li>
-              <li>
-                <a href="/advertise/">Advertise</a>
-              </li>
-              <li>
-                <a href="/pages/childrens/index2.html">Children's </a>
-              </li>
-              <li></li>
-            </div>
-            <div class="header-nav-icons">
-              <li class="header-nav-search">
-                <i class="fa fa-search"></i>
-              </li>
-            </div>
-            <div class="header-login-container bottom">
-              <div class="user-notifications"></div>
-            </div>
-          </ul>
-        </div>
-        <!-- .lg-col-wrapper -->
-        <!-- <div class="rainbow-border-container sticky">
-          <div class="rainbow-border"></div>
-        </div> -->
-        <div class="search-bar closed">
-          <div class="lg-col-wrapper-no-space">
-            <form
-              class="search-form clearfix"
-              action="/search/"
-              method="get"
-              enctype="multipart/form-data"
-            >
-              <div class="search-bar-input-wrap">
-                <input
-                  type="text"
-                  name="search_term"
-                  value="Search..."
-                  placeholder="Search..."
-                />
-              </div>
-              <button type="submit" name="submit">
-                <i class="fa fa-chevron-right"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <!-- .header-wrapper -->
-      <div class="alert-container"></div>
-    </header>
-    <!-- header section  -->
+            <!--  -->
+           
+            <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search playlists or videos..." onkeyup="filterContent()">
+</div>
 
-  <!-- Banner -->
-  <header class="page-banner fade-in" style="background-image: url('/images/ebsimages/banner.jpeg');">
-    <div class="overlay"></div>
-    <div class="banner-content">
-      <h1>Our TV Shows</h1>
-      <p>Explore entertainment, documentaries, talk shows, and breaking news.</p>
+<!-- <div class="category-buttons">
+    <button onclick="setCategory('Music')">Music</button>
+    <button onclick="setCategory('Tutorial')">Tutorials</button>
+    <button onclick="setCategory('')">All</button>
+</div> -->
+
+        </header>
+
+        <div id="playlistsGrid" class="grid"></div>
+
+        <div id="videosView" style="display:none;">
+            <div id="videosGrid" class="grid"></div>
+            <button id="loadMoreBtn" onclick="fetchVideos()">Load More</button>
+        </div>
     </div>
-  </header>
 
-  <!-- Categories Filter -->
-  <section class="section-container fade-in">
-    <h2 class="section-title">Browse by Category</h2> 
-    <div class="filter-container">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="news">News</button>
-      <button class="filter-btn" data-category="entertainment">Entertainment</button>
-      <button class="filter-btn" data-category="documentary">Documentary</button>
-      <button class="filter-btn" data-category="talk">Talk Shows</button>
-    </div>
-  </section>
-
-  <!-- Shows Grid -->
-  <section class="section-container fade-in">
-    <h2 class="section-title">All Shows</h2>
-
-    <div class="shows-grid">
-
-      <div class="show-card" data-category="news">
-        <img src="../../images/ebsimages/ebsnewmini/adisneger.jfif" alt="Morning News" />
-        <div class="show-content">
-          <h3>What's New</h3>
-          <p>Daily headlines and breaking stories to start your day informed.</p>
-        </div>
-      </div>
-
-      <div class="show-card" data-category="entertainment">
-        <img src="../../images/ebsimages/ebsnewmini/aradamini.webp" alt="Fun Time" />
-        <div class="show-content">
-          <h3>Arada Kidame</h3>
-          <p>A fun mix of comedy, games, music, and celebrity highlights.</p>
-        </div>
-      </div>
-
-      <div class="show-card" data-category="documentary">
-        <img src="../../images/ebsimages/ebsnewmini/discover.jfif" alt="Nature Life" />
-        <div class="show-content">
-          <h3>BIography </h3>
-          <p>Weekly documentary exploring something.</p>
-        </div>
-      </div>
-
-      <div class="show-card" data-category="talk">
-        <img src="../../images/ebsimages/ebsnewmini/etopis.jfif" alt="Real Talk" />
-        <div class="show-content">
-          <h3>Real Talk</h3>
-          <p>Honest conversations with influential guests and experts.</p>
-        </div>
-      </div>
-
-      <div class="show-card" data-category="news">
-        <img src="../../images/ebsimages/ebsnewmini/kidamekeseatmini.jfif" alt="Prime News" />
-        <div class="show-content">
-          <h3>Prime News</h3>
-          <p>Evening news offering deep insights and investigative reports.</p>
-        </div>
-      </div>
-
-      <div class="show-card" data-category="entertainment">
-        <img src="../../images/ebsimages/ebsnewmini/2030.jfif" alt="Star Night" />
-        <div class="show-content">
-          <h3>Star Night</h3>
-          <p>A spotlight show featuring celebrities, musicians, and film stars.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="shows.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="shows.js"></script>
 </body>
 </html>
