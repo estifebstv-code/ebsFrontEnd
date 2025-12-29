@@ -1,0 +1,51 @@
+:root { --red: #e50914; --black: #141414; --gray: #999; }
+body { background: var(--black); color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; overflow-x: hidden; }
+
+/* Navbar */
+.navbar { position: fixed; top: 0; width: 100%; height: 70px; display: flex; align-items: center; padding: 0 4%; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); z-index: 1000; }
+.nav-logo { color: var(--red); font-weight: bold; font-size: 2rem; margin-right: 40px; }
+.nav-links span { margin-right: 20px; cursor: pointer; font-size: 0.9rem; transition: 0.3s; color: #e5e5e5; }
+.nav-links span:hover { color: var(--gray); }
+
+/* Banner */
+.banner { position: relative; height: 80vh; overflow: hidden; }
+.banner-slider { display: flex; width: 100%; height: 100%; transition: transform 0.8s ease-in-out; }
+.banner-slide { min-width: 100%; height: 100%; object-fit: cover; filter: brightness(50%); }
+.banner-content { position: absolute; top: 30%; left: 4%; z-index: 10; max-width: 500px; }
+.search-container input { background: rgba(0,0,0,0.6); border: 1px solid #666; color: white; padding: 12px; border-radius: 4px; width: 100%; margin-bottom: 20px; outline: none; }
+
+/* Rows & Horizontal Scroll */
+.main-content { padding: 0 4%; margin-top: -120px; position: relative; z-index: 20; }
+.row { margin-bottom: 20px; }
+.row-wrapper { position: relative; display: flex; align-items: center; }
+.row-posters { display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 8px; padding: 15px 0; }
+.row-posters::-webkit-scrollbar { display: none; }
+
+.poster { min-width: 220px; height: 125px; object-fit: cover; cursor: pointer; transition: 0.3s; border-radius: 4px; }
+.poster:hover { transform: scale(1.1); z-index: 30; }
+
+/* Scroll Buttons (Arrows) */
+.handle { 
+    position: absolute; height: 100%; width: 45px; background: rgba(0,0,0,0.5); 
+    color: white; border: none; font-size: 2.5rem; z-index: 40; cursor: pointer; 
+    opacity: 0; transition: 0.3s; 
+}
+.row-wrapper:hover .handle { opacity: 1; }
+.handle:hover { background: rgba(0,0,0,0.8); font-size: 3rem; }
+.handle-left { left: 0; }
+.handle-right { right: 0; }
+
+/* FIXED MODAL */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); }
+.modal-content { 
+    background: #181818; margin: 5vh auto; width: 90%; max-width: 850px; 
+    max-height: 90vh; border-radius: 8px; position: relative; overflow-y: auto; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.modal-media { width: 100%; aspect-ratio: 16/9; }
+.modal-media iframe { width: 100%; height: 100%; border: none; }
+.modal-details { padding: 25px; }
+.close-modal { position: absolute; right: 20px; top: 15px; font-size: 35px; cursor: pointer; color: white; z-index: 2100; }
+.modal-footer { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; margin-top: 20px; }
+.btn-play { background: white; color: black; border: none; padding: 10px 30px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+.btn-fav { background: rgba(109, 109, 110, 0.7); color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }

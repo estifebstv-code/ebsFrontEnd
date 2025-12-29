@@ -1,58 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CinemaFlix</title>
+<link rel="stylesheet" href="css/style.css" />
+    <!-- ********* -->
+
+    <link rel="stylesheet" href="../../css/all.min.css" crossorigin="anonymous" />
+
+    <link href="../../css/style.css" rel="stylesheet" />
+    <script src="../../js/jquery-3.6.1.min.js" crossorigin="anonymous"></script>
+    <script src="../../js/jquery.sticky.js"></script>
+    <script>
+      var WEBVIEW = WEBVIEW || {};
+      WEBVIEW.is_webview = false;
+      WEBVIEW.log_stats = function () {};
+     // WEBVIEW.full_url = "https://metv.com/";
+      WEBVIEW.only_content = false;
+      WEBVIEW.access_token = "";
+      WEBVIEW.market_id = "1";
+      WEBVIEW.app_location_enabled = false;
+      WEBVIEW.version = 1;
+      var WCS = WCS || {};
+      WCS.isHomepage = true;
+      WCS.is_svengoolie = false;
+      WCS.CAPTCHA_SITE_KEY = "6Lee4v4SAAAAAMqR4dJGfD5PpNut-pwf12qezPdZ";
+      var WVM = WVM || {};
+    </script>
+    <script src="../../js/scripts.js"></script>
+    <!-- ********* -->
 </head>
 <body>
-  <div class="banner fade-in">About Our Company</div>
+    <!-- header section  -->
+    <header>
+      <div class="header-outer-container lg-col-wrapper-no-space clearfix">
+        <!-- NEW USER WELCOME PACKAGE GOES HERE  -->
 
-  <section class="description fade-in">
-    <h2>Who We Are</h2>
-    <p>
-      We are a passionate team dedicated to delivering high-quality digital solutions.
-      Our mission is to help brands grow, innovate, and connect with the world through
-      modern technologies and creative strategies.
-    </p>
-  </section>
+        <div class="header-row-wrapper">
+          <div class="header-logo-container">
+            <span class="header-nav-menu-tab"><i class="fa fa-bars"></i></span>
+            <a href="/"
+              ><img
+                style="width: 5em"
+                class="logo"
+                src="/images/ebsimages/cropped-EBS-Logo.png"
+            /></a>
+          </div>
+          <div class="header-buttons mobile-only">
+            <a class="btn-primary btn-small purple" href="/"
+              ><img src="images/television_icon.png" />Where To Watch
+            </a>
+            <a class="btn-primary btn-small purple" href="/"> Advertize Now </a>
+            <a
+              class="contact btn-primary btn-small yellow"
+              href="/pages/contact/contact.html"
+              ><i class="fas fa-envelope"></i>Contact
+            </a>
+          </div>
+          <div class="header-buttons desktop-only">
+            <a class="btn-primary btn-small purple" href="/"
+              ><img src="images/television_icon.png" />Where To Watch
+            </a>
+            <a class="btn-primary btn-small blue" href="/" target="_blank"
+              ><i class="fas fa-shopping-cart"></i>Advertize Now
+            </a>
+            <a
+              class="contact btn-primary btn-small yellow"
+              href="/pages/contact/contact.html"
+              ><i class="fas fa-envelope"></i>Contact
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="header-nav sticky">
+        <!-- <div class="rainbow-border-container non-sticky">
+          <div class="rainbow-border"></div>
+        </div> -->
+        <div class="lg-col-wrapper clearfix">
+          <span class="header-nav-menu-tab bottom"
+            ><i class="fa fa-bars"></i
+          ></span>
+          <a href="/" title="ebs HD"
+            ><img
+              class="logo-resp"
+              src="../../images/ebsimages/cropped-EBS-Logo.png"
+              width="30"
+              height="40"
+          /></a>
+          <ul class="clearfix">
+            <li>
+              <a href="/pages/news/news.html">News</a>
+            </li>
+            <li>
+              <a href="/pages/schedules/schedule.html">Schedule</a>
+            </li>
+            <li>
+              <a href="/pages/shows/shows.html">Shows</a>
+            </li>
+            <li>
+              <a href="/pages/weather/weather.html">Weather</a>
+            </li>
+            <li>
+              <a href="/pages/about/index2.html">About</a>
+            </li>
+            <li>
+              <a href="/pages/music/index2.html" target="_blank" rel="noopener">
+                Music</a
+              >
+            </li>
+            <li>
+              <a href="/pages/cinema/index2.html" rel="noopener" target="_blank"
+                >Cinema</a
+              >
+            </li>
+            <li>
+              <a href="/pages/childrens/index2.html">Children's </a>
+            </li>
+            <div class="mobile-only">
+              <li>
+                <a href="/">LIve stream</a>
+              </li>
+            </div>
+            <div class="mobile-only">
+              <li>
+                <a href="/pages/about/index2.html">About</a>
+              </li>
+              <li>
+                <a href="/pages/contact/contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="/advertise/">Advertise</a>
+              </li>
+              <li>
+                <a href="/pages/childrens/index2.html">Children's </a>
+              </li>
+              <li></li>
+            </div>
+            <div class="header-nav-icons">
+              <li class="header-nav-search">
+                <i class="fa fa-search"></i>
+              </li>
+            </div>
+            <div class="header-login-container bottom">
+              <div class="user-notifications"></div>
+            </div>
+          </ul>
+        </div>
+        <!-- .lg-col-wrapper -->
+        <!-- <div class="rainbow-border-container sticky">
+          <div class="rainbow-border"></div>
+        </div> -->
+        <div class="search-bar closed">
+          <div class="lg-col-wrapper-no-space">
+            <form
+              class="search-form clearfix"
+              action="/search/"
+              method="get"
+              enctype="multipart/form-data"
+            >
+              <div class="search-bar-input-wrap">
+                <input
+                  type="text"
+                  name="search_term"
+                  value="Search..."
+                  placeholder="Search..."
+                />
+              </div>
+              <button type="submit" name="submit">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- .header-wrapper -->
+      <div class="alert-container"></div>
+    </header>
+    <!-- header section  -->
 
-  <section class="testimonials fade-in">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">“Outstanding service! Everything was delivered on time and exceeded our expectations.”</div>
-      <div class="testimonial">“Great team to work with. They listened and delivered exactly what we needed.”</div>
-      <div class="testimonial">“Professional, reliable, and creative. Highly recommended.”</div>
-    </div>
-  </section>
 
- <section class="partners fade-in">
-  <h2>Our Partners</h2>
-<div >
+<!-- <header class="navbar">
+<h1 class="logo">CinemaFlix</h1>
+</header> -->
 
-  <div class="partners-carousel partnerswidth" id="partnerCarousel">
 
-    <!-- <button class="carousel-btn prev">&#10094;</button> -->
-
-    <div class="partners-track">
-      <img src="https://dummyimage.com/200x80/ccc/000&text=1" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=2" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=3" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=4" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=5" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=6" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=7" />
-      <img src="https://dummyimage.com/200x80/ccc/000&text=8" />
-    </div>
-
-    <!-- <button class="carousel-btn next">&#10095;</button> -->
-
-  </div>
+<!-- BANNER -->
+<section class="banner">
+<img id="bannerImg" />
+<div class="banner-info">
+<h2 id="bannerTitle"></h2>
+<p id="bannerPlot"></p>
 </div>
 </section>
 
 
-<script src="script.js"></script>
+<!-- CATEGORIES -->
+<section class="categories">
+<button class="cat active" data-cat="all">All</button>
+<button class="cat" data-cat="Action">Action</button>
+<button class="cat" data-cat="Drama">Drama</button>
+<button class="cat" data-cat="Comedy">Comedy</button>
+<button class="cat" data-cat="Sci-Fi">Sci-Fi</button>
+</section>
+
+
+<!-- ROWS -->
+<section class="row">
+<h2>Trending Now</h2>
+<div class="row-posters" id="trending"></div>
+</section>
+
+
+<section class="row">
+<h2>Action Movies</h2>
+<div class="row-posters" id="action"></div>
+</section>
+
+<section class="row">
+<h2>Comedy Movies</h2>
+<div class="row-posters" id="comedy"></div>
+</section>
+<section class="row">
+<h2>Drama Movies</h2>
+<div class="row-posters" id="drama"></div>
+</section>
+
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-box">
+<span tye="button" method="close" name="close" id="close">×</span>
+<img id="modalImg" />
+<h2 id="modalTitle"></h2>
+<p id="modalPlot"></p>
+<div class="modal-actions">
+<a href="video.html" class="btn play">▶ Watch Now</a>
+<button class="btn fav">❤ My List</button>
+</div>
+</div>
+</div>
+
+
+<script src="js/app.js"></script>
 </body>
 </html>

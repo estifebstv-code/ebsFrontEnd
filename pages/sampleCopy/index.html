@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ebs Cinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo"> <img width="50px" src="../../images/ebsimages/cropped-EBS-Logo.png" alt="ebs">CINEMA</div>
+        <div id="nav-links" class="nav-links"></div>
+    </nav>
+
+    <header class="banner">
+        <div id="banner-slider" class="banner-slider"></div>
+        <div class="banner-content">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search videos..." onkeyup="filterRows()">
+            </div>
+            <h1 id="banner-title">Trending Now</h1>
+            <p id="banner-desc">Discover the most watched content on our channel.</p>
+        </div>
+    </header>
+
+    <main class="main-content" id="playlist-rows"></main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modal-media" class="modal-media"></div>
+            <div class="modal-details">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="modal-footer">
+                    <button class="btn-play" id="main-play-btn">▶ Play</button>
+                    <button class="btn-fav">✚ My List</button>
+                    <div class="g-ytsubscribe" id="sub-btn" data-layout="default"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

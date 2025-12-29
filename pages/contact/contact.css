@@ -10,7 +10,7 @@ body {
 .contact-banner {
   width: 100%;
   height: 50vh;
-  background: url('/ebsFrontEnd/images/ebsimages/banner.jpeg') center/cover no-repeat;
+  background: url('/images/ebsimages/banner.jpeg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
