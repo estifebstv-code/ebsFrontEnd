@@ -1,0 +1,88 @@
+ebstv.free.nf
+
+    urgent 
+    ------
+        add home button to nav bar === donne!
+        remove weather from nav adn add it to home page section
+        add google add section
+        stories section not youtube but image and nees to read
+
+
+to does
+-------
+
+    all pages need footer
+
+    pages to build 
+        legal page
+        advertising
+        live stream
+
+    schedule page 
+        filtering
+
+    news on mobile
+        side bar and text format
+    weather on mobile 
+        fix map display
+
+    cinema 
+       modal closer
+       modal size
+
+
+AIzaSyC7yaIulYFJM8FxGVPrRlk00LJ9VqJVhMk
+
+https://console.cloud.google.com/logs/query;cursorTimestamp=2025-12-24T21:28:15.528638Z;duration=P7D;query=%2528logName%20%3D%20%22projects%2Ftvapp-482221%2Flogs%2Fcloudaudit.googleapis.com%252Factivity%22%20OR%20logName%20%3D%20%22projects%2Ftvapp-482221%2Flogs%2Fcloudaudit.googleapis.com%252Fdata_access%22%20OR%20labels.activity_type_name:*%2529%0Atimestamp%3D%222025-12-24T21:28:15.528638Z%22%0AinsertId%3D%2231wss5c1ly%22?project=tvapp-482221
+
+
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "authenticationInfo": {
+      "principalEmail": "eestifanos26@gmail.com"
+    },
+    "requestMetadata": {
+      "callerIp": "196.189.127.225",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {},
+      "destinationAttributes": {}
+    },
+    "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+    "authorizationInfo": [
+      {
+        "resource": "projectnumbers/440761185554/services/cloudapis.googleapis.com",
+        "permission": "serviceusage.services.enable",
+        "granted": true,
+        "resourceAttributes": {},
+        "permissionType": "ADMIN_WRITE"
+      },
+      {
+        "resource": "services/cloudapis.googleapis.com",
+        "permission": "servicemanagement.services.bind",
+        "granted": true,
+        "resourceAttributes": {},
+        "permissionType": "DATA_WRITE"
+      }
+    ],
+    "resourceName": "projects/tvapp-482221/services/cloudapis.googleapis.com"
+  },
+  "insertId": "31wss5c1ly",
+  "resource": {
+    "type": "audited_resource",
+    "labels": {
+      "project_id": "tvapp-482221",
+      "service": "",
+      "method": "google.api.serviceusage.v1.ServiceUsage.EnableService"
+    }
+  },
+  "timestamp": "2025-12-24T21:28:15.528638Z",
+  "severity": "NOTICE",
+  "logName": "projects/tvapp-482221/logs/cloudaudit.googleapis.com%2Factivity",
+  "operation": {
+    "id": "operations/acat.p2-440761185554-c39de16d-6020-4b43-ace7-ba9fbd2c5347",
+    "producer": "serviceusage.googleapis.com",
+    "first": true
+  },
+  "receiveTimestamp": "2025-12-24T21:28:16.824153272Z"
+}
