@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <title>News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="news.css">
+</head>
+<body class="dark">
+
+<!-- TICKER (FIXED) -->
+<div class="ticker">
+  <span class="ticker-label">HEADLINES</span>
+  <div class="ticker-track" id="tickerTrack"></div>
+
+  <button class="mode-toggle" id="modeToggle">☀</button>
+</div>
+
+<!-- FEATURED (2 CARDS) -->
+<section class="featured" id="featured"></section>
+
+<!-- NEWS GRID (4 PER ROW) -->
+<section class="news-grid" id="newsGrid"></section>
+
+<div class="load-more">
+  <button id="loadMoreBtn">Load More News</button>
+</div>
+
+<script src="news.js"></script>
+</body>
+</html>
